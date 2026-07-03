@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weekly SEO & Dev Report — June 29 – July 3, 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0c1220;--ink-soft:#3d4a5c;--ink-muted:#8896a7;--surface:#f6f7f9;--card:#fff;--accent:#2e5bff;--accent-glow:rgba(46,91,255,.12);--green:#0d9f6e;--green-bg:#eafaf3;--amber:#cf8a00;--amber-bg:#fff8e6;--blue-bg:#eef3ff;--purple:#7c3aed;--purple-bg:#f3eeff;--border:#e4e8ee;--border-active:#2e5bff;--radius:16px;--radius-sm:10px;--shadow-sm:0 1px 3px rgba(12,18,32,.04);--shadow-md:0 4px 24px rgba(12,18,32,.07);--shadow-lg:0 12px 48px rgba(12,18,32,.10);--font-display:'Fraunces',Georgia,serif;--font-body:'Outfit',-apple-system,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:var(--font-body);background:var(--surface);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.6}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}@keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes slideDown{from{opacity:0;max-height:0}to{opacity:1;max-height:800px}}.fade-up{animation:fadeUp .6s cubic-bezier(.22,1,.36,1) both}.delay-1{animation-delay:.08s}.delay-2{animation-delay:.16s}.delay-3{animation-delay:.24s}.delay-4{animation-delay:.32s}
+.container{max-width:1060px;margin:0 auto;padding:0 24px}
+.hero{background:linear-gradient(145deg,#0c1220 0%,#162038 40%,#1e3060 100%);padding:56px 0 48px;position:relative;overflow:hidden}.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.03'/%3E%3C/svg%3E");pointer-events:none}.hero::after{content:'';position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(46,91,255,.08)0%,transparent 70%);top:-200px;right:-100px;pointer-events:none}
+.hero-inner{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:32px}.hero-label{font-size:11px;font-weight:700;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.2em;margin-bottom:12px}.hero h1{font-family:var(--font-display);font-size:clamp(28px,4vw,42px);font-weight:800;color:#fff;line-height:1.15;letter-spacing:-.02em}.hero h1 span{background:linear-gradient(135deg,#6b9aff,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}.hero-date{font-size:15px;color:rgba(255,255,255,.5);margin-top:12px;font-weight:400}
+.hero-stats{display:flex;gap:12px;flex-wrap:wrap}.hero-stat{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:16px 24px;text-align:center;backdrop-filter:blur(8px);min-width:100px;transition:transform .3s,border-color .3s}.hero-stat:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.2)}.hero-stat-val{font-family:var(--font-display);font-size:30px;font-weight:800;line-height:1}.hero-stat-val.green{color:#34d399}.hero-stat-val.blue{color:#60a5fa}.hero-stat-val.amber{color:#fbbf24}.hero-stat-val.purple{color:#c084fc}.hero-stat-label{font-size:10px;color:rgba(255,255,255,.45);font-weight:600;text-transform:uppercase;letter-spacing:.12em;margin-top:6px}
+.toolbar{padding:24px 0 0;position:sticky;top:0;z-index:100;background:var(--surface)}.toolbar::after{content:'';position:absolute;bottom:-20px;left:0;right:0;height:20px;background:linear-gradient(to bottom,var(--surface),transparent);pointer-events:none}
+.hotel-filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}.hotel-btn{padding:7px 18px;border-radius:100px;border:1.5px solid var(--border);background:var(--card);color:var(--ink-soft);font-family:var(--font-body);font-size:12px;font-weight:600;cursor:pointer;transition:all .25s}.hotel-btn:hover{border-color:var(--accent);color:var(--accent)}.hotel-btn.active{background:var(--accent);border-color:var(--accent);color:#fff;box-shadow:0 2px 12px rgba(46,91,255,.25)}
+.tab-bar{display:flex;gap:4px;background:#ebeef2;border-radius:14px;padding:4px;margin-bottom:24px}.tab-btn{flex:1;padding:13px 8px;border-radius:11px;border:none;background:transparent;font-family:var(--font-body);font-size:12px;font-weight:700;color:var(--ink-muted);cursor:pointer;transition:all .3s;white-space:nowrap}.tab-btn:hover{color:var(--ink-soft)}.tab-btn.active{background:var(--card);color:var(--ink);box-shadow:var(--shadow-sm)}
+.section{display:none;padding-bottom:40px}.section.active{display:block;animation:fadeIn .35s ease}
+.stat-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-bottom:32px}.stat-card{text-align:center;padding:24px 16px;border-radius:var(--radius);background:var(--card);border:1px solid var(--border);transition:transform .3s,box-shadow .3s}.stat-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}.stat-card-val{font-family:var(--font-display);font-size:34px;font-weight:800;line-height:1}.stat-card-val.purple{color:#7c3aed}.stat-card-val.blue{color:var(--accent)}.stat-card-val.green{color:var(--green)}.stat-card-val.amber{color:var(--amber)}.stat-card-val.teal{color:#0891b2}.stat-card-label{font-size:11px;color:var(--ink-muted);font-weight:600;text-transform:uppercase;letter-spacing:.1em;margin-top:8px}
+.summary-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:28px 32px;margin-bottom:16px;transition:all .3s}.summary-card:hover{box-shadow:var(--shadow-md);border-color:#d0d7e2}.summary-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:12px}.summary-hotel-info{display:flex;align-items:center;gap:14px}.hotel-avatar{width:46px;height:46px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;font-size:18px;color:#fff;flex-shrink:0}.summary-hotel-name{font-family:var(--font-display);font-size:18px;font-weight:700}.summary-hotel-meta{font-size:12px;color:var(--ink-muted);font-weight:500;margin-top:2px}.summary-text{font-size:13.5px;color:var(--ink-soft);line-height:1.75;margin-bottom:20px}
+.wins-box{background:var(--green-bg);border:1px solid #c6f0dc;border-radius:var(--radius-sm);padding:18px 20px}.wins-label{font-size:10px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px}.wins-tags{display:flex;flex-wrap:wrap;gap:6px}.win-tag{padding:5px 14px;background:#fff;border:1px solid #d1fae5;border-radius:8px;font-size:12px;color:#065f46;font-weight:500;transition:all .2s}.win-tag:hover{background:#d1fae5}
+.task-card{background:var(--card);border:1.5px solid var(--border);border-radius:var(--radius);margin-bottom:10px;overflow:hidden;transition:all .3s}.task-card.open{border-color:var(--border-active);box-shadow:var(--shadow-md)}.task-card.open.dev-card{border-color:#3b82f6}.task-card.open.design-card{border-color:#7c3aed}
+.task-head{padding:17px 24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px;user-select:none;transition:background .2s}.task-head:hover{background:#fafbfc}.task-head-left{display:flex;align-items:center;gap:14px;flex:1;min-width:0}.task-icon{font-size:20px;flex-shrink:0;width:36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:10px;background:var(--accent-glow)}.dev-card .task-icon{background:rgba(59,130,246,.1)}.design-card .task-icon{background:rgba(124,58,237,.1)}.task-title{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:2px}.task-meta{font-size:11px;color:var(--ink-muted);font-weight:500}
+.task-head-right{display:flex;align-items:center;gap:10px;flex-shrink:0}.chevron{font-size:16px;color:var(--ink-muted);transition:transform .3s;line-height:1}.task-card.open .chevron{transform:rotate(180deg)}
+.task-body{display:none;padding:0 24px 22px;border-top:1px solid #f1f3f6;animation:slideDown .35s ease}.task-card.open .task-body{display:block}.task-body-inner{padding-top:18px}.task-columns{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:18px}.task-col-label{font-size:10px;font-weight:700;color:var(--ink-muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:7px}.task-col-text{font-size:13px;color:var(--ink-soft);line-height:1.65}
+.task-links-label{font-size:10px;font-weight:700;color:var(--ink-muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px}.task-links{display:flex;flex-wrap:wrap;gap:7px}
+.badge{display:inline-block;padding:4px 14px;border-radius:100px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}.badge-green{background:var(--green-bg);color:var(--green)}.badge-amber{background:var(--amber-bg);color:var(--amber)}.badge-blue{background:var(--blue-bg);color:var(--accent)}.badge-complete{display:inline-flex;align-items:center;gap:5px;padding:5px 15px;border-radius:100px;background:var(--green-bg);color:var(--green);font-size:12px;font-weight:700}
+.link-pill{display:inline-flex;align-items:center;gap:5px;padding:5px 14px;background:var(--blue-bg);color:var(--accent);border:1px solid #d4e0ff;border-radius:100px;font-size:11px;font-weight:600;text-decoration:none;transition:all .25s;white-space:nowrap}.link-pill:hover{background:var(--accent);color:#fff;border-color:var(--accent);transform:translateY(-1px);box-shadow:0 3px 12px rgba(46,91,255,.2)}.link-pill svg{width:12px;height:12px}
+.dev-num{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,#3b82f6,#60a5fa);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:12px;flex-shrink:0}.design-num{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,#7c3aed,#a78bfa);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:12px;flex-shrink:0}
+.footer{text-align:center;padding:40px 0 28px;font-size:12px;color:var(--ink-muted);font-weight:500;border-top:1px solid var(--border);margin-top:20px}
+@media(max-width:700px){.hero{padding:40px 0 36px}.hero-stats{width:100%}.hero-stat{flex:1;min-width:70px;padding:12px 8px}.hero-stat-val{font-size:22px}.task-columns{grid-template-columns:1fr}.stat-row{grid-template-columns:1fr 1fr}.summary-card{padding:22px 20px}.tab-btn{font-size:10.5px;padding:11px 4px}.hotel-btn{font-size:11px;padding:6px 13px}}
+</style>
+</head>
+<body>
+<section class="hero"><div class="container">
+<div class="hero-inner fade-up"><div>
+<div class="hero-label">Weekly Performance Report</div>
+<h1>SEO & Development<br><span>Task Report</span></h1>
+<div class="hero-date">29 June — 3 July, 2026</div>
+</div>
+<div class="hero-stats">
+<div class="hero-stat fade-up delay-1"><div class="hero-stat-val green" id="heroTotal">30</div><div class="hero-stat-label">Total Tasks</div></div>
+<div class="hero-stat fade-up delay-2"><div class="hero-stat-val blue" id="heroCompleted">22</div><div class="hero-stat-label">Completed</div></div>
+<div class="hero-stat fade-up delay-3"><div class="hero-stat-val purple">13</div><div class="hero-stat-label">Design Tasks</div></div>
+<div class="hero-stat fade-up delay-4"><div class="hero-stat-val amber">9</div><div class="hero-stat-label">Properties</div></div>
+</div></div></div></section>
+
+<div class="toolbar"><div class="container">
+<div class="hotel-filters" id="hotelFilters"></div>
+<div class="tab-bar">
+<button class="tab-btn active" data-tab="summary" onclick="switchTab('summary')">📊 Summary</button>
+<button class="tab-btn" data-tab="seo" onclick="switchTab('seo')">🔍 SEO Tasks</button>
+<button class="tab-btn" data-tab="dev" onclick="switchTab('dev')">💻 Dev Tasks</button>
+<button class="tab-btn" data-tab="design" onclick="switchTab('design')">🎨 Design</button>
+</div></div></div>
+
+<div class="container">
+<div class="section active" id="section-summary"></div>
+<div class="section" id="section-seo"></div>
+<div class="section" id="section-dev"></div>
+<div class="section" id="section-design"></div>
+</div>
+<div class="container"><div class="footer">Weekly Task Report · Prepared by SEO & Dev Team · Week of June 29 – July 3, 2026</div></div>
+
+<script>
+const HOTELS=["All Properties","Proper Hotel","Hotel June","Shelborne","Avalon Hotel","Ingleside Estate","Montauk Yacht Club","Santa Monica Proper","Austin Proper"];
+const HOTEL_COLORS={"Hotel June":"#2e5bff","Proper Hotel":"#7c3aed","Shelborne":"#0891b2","Avalon Hotel":"#dc2626","Culver Hotel":"#059669","Montauk Yacht Club":"#0369a1","Ingleside Estate":"#b45309","Santa Monica Proper":"#7c3aed","Austin Proper":"#7c3aed"};
+const extLink=`<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3H3v10h10v-3M9 2h5v5M14 2L7 9"/></svg>`;
+
+const SEO_TASKS=[
+{id:1,hotel:"Avalon Hotel",source:"Weekly SEO Task",title:"Website General Audit — Avalon Hotel",category:"CRO / UX",description:"Checked the live website pages and reviewed the overall UI/UX experience to identify any issues that need to be fixed or improved.",action:"Identified pages with UI/UX issues and broken or incorrect internal links — fixes implemented.",links:[{label:"Avalon Audit Sheet",url:"https://docs.google.com/spreadsheets/d/1lXv6pO4TnCNqAxQdfjE0SSXfookl3I0hhWO-ewhhNGw/edit?gid=43950776#gid=43950776"}],status:"Implemented"},
+{id:2,hotel:"Ingleside Estate",source:"Weekly SEO Task",title:"Visibility Drop Analysis — Ingleside Estate",category:"Content Strategy",description:"Analyzed top hotel pages for keyword rankings, reviewed competitors, and identified content gaps with recommendations to improve site visibility and presentation.",action:"Will analyze blog posting requirements and content optimization needs, gather required information from client, and assess further improvements to enhance overall site performance.",links:[{label:"Visibility Analysis Sheet",url:"https://docs.google.com/spreadsheets/d/1pcek2fk3j7q-O2s7FfiX7x4MdDwWPCWMeBS96xngh5M/edit?gid=352146741#gid=352146741"}],status:"Analysis Done"},
+{id:3,hotel:"Proper Hotel",source:"Mail",title:"Wellness Pages Optimization — Schema & GMB",category:"Technical SEO",description:"Analyzed page schemas and identified missing details. Reviewed GMB listings and added remarks for required page updates. Checked FAQs and added notes for required information to be included.",action:"Identified pages with missing schema data, created and implemented updated structured schema markup to improve accuracy and enhance search engine visibility and indexing.",links:[{label:"Wellness Optimization Sheet",url:"https://docs.google.com/spreadsheets/d/1LH9sJHmpyxisEtz91nD5AD53igGzlxcPu9Xj5nvM6Vk/edit?gid=0#gid=0"}],status:"Implemented"},
+{id:4,hotel:"Proper Hotel",source:"Mail",title:"Monetate Tag Positioning Review",category:"Technical SEO",description:"Identified pages containing the Monetate tag in the source code and documented them with screenshots. Suggested repositioning the Monetate tag after the GTM tag for best practice implementation.",action:"Identified pages where Monetate tag is placed before GTM tag. Implementation in progress to reposition Monetate tag after GTM as per best practice.",links:[{label:"Monetate Tag Sheet",url:"https://docs.google.com/spreadsheets/d/1JCL8q6lED2SnMF-MxZolHzpmHLlv3luC4aSoKeLTXjs/edit?gid=0#gid=0"}],status:"In Progress"},
+{id:5,hotel:"Proper Hotel",source:"Weekly SEO Task",title:"Website General Audit — Proper Portfolio",category:"CRO / UX",description:"Checked the live website pages and reviewed the overall UI/UX experience to identify any issues that need to be fixed or improved.",action:"Identified pages with UI/UX issues and broken or incorrect internal links that require updates and fixes.",links:[{label:"Proper Audit Sheet",url:"https://docs.google.com/spreadsheets/d/1_3_ilBlUaNSfwI-5OabgttwqXxmkudzAfrAdCKpmVvA/edit?gid=0#gid=0"}],status:"In Progress"},
+{id:6,hotel:"Avalon Hotel",source:"Weekly SEO Task",title:"GSC Errors — Avalon Hotel",category:"Technical SEO",description:"Identified pages with errors flagged in Google Search Console.",action:"Analysis completed — implementation required to improve overall site visibility and performance health.",links:[{label:"Avalon GSC Sheet",url:"https://docs.google.com/spreadsheets/d/12JRB4hSvHq-Dfy2aBWkA4Ru5Z-oeNChL/edit?gid=1306212102#gid=1306212102"}],status:"Analysis Done"},
+{id:7,hotel:"Hotel June",source:"Weekly SEO Task",title:"GSC Errors — Hotel June",category:"Technical SEO",description:"Identified pages with errors flagged in Google Search Console.",action:"Analysis completed — implementation required to improve overall site visibility and performance health.",links:[{label:"HJ GSC Sheet",url:"https://docs.google.com/spreadsheets/d/1Anh6px9bhAt0WiUWOQwWWK3DkFhFWkIB/edit?gid=1997807179#gid=1997807179"}],status:"Analysis Done"},
+{id:8,hotel:"Montauk Yacht Club",source:"Weekly SEO Task",title:"GSC Errors — Montauk Yacht Club",category:"Technical SEO",description:"Identified pages with errors flagged in Google Search Console.",action:"Implemented necessary fixes and revisions to improve overall site visibility and performance health.",links:[{label:"MYC GSC Sheet",url:"https://docs.google.com/spreadsheets/d/1r1jCrYtEU7EDZvjs1pfq605qOEawB_Ku/edit?gid=1456781822#gid=1456781822"}],status:"Implemented"},
+{id:9,hotel:"Proper Hotel",source:"Weekly SEO Task",title:"Event Schema Revisions — Ongoing",category:"Technical SEO",description:"As per changes in events hosted by properties, revised schema markup with updated event information.",action:"Updated schema markup to reflect latest information for watch party and other events being hosted across properties.",links:[{label:"Event Schema Doc",url:"https://docs.google.com/document/d/1SiluPIA6Ei7vUdUj36AKR6G91Rg17F4QgkT2ByIJGRc/edit?usp=sharing"}],status:"Implemented"},
+{id:10,hotel:"Proper Hotel",subProperties:["Austin","DTLA","Shelborne","HJWL","SMP"],source:"Weekly GMB Task",title:"GMB Weekly Postings Updated",category:"Local SEO",description:"Weekly posting updated over GMB profiles for active presence and updates for local audience.",action:"Highlighted ongoing offers and upcoming updates through GMB posts. Tracking performance and insights to optimize further.",links:[{label:"GMB Posting Doc",url:"https://docs.google.com/document/d/1UGv2M4E3CX1ZVnZrm1Pgwf-RV8GqWr48DemIgS8dCeo/edit?usp=sharing"}],status:"Update Posted"},
+];
+
+const DEV_TASKS=[
+{id:1,hotel:"Shelborne",source:"Asana",title:"SMB — Condé Nast Announcement Bar Removed",description:"Removed the Condé Nast Traveler announcement bar from Shelborne.",link:"https://app.asana.com/1/361605662576941/inbox/1211472688196060/item/1216052487441408/story/1216139204488554?focus=true",status:"Done"},
+{id:2,hotel:"Proper Hotel",source:"Asana",title:"Proper — Condé Nast Announcement Bar Removed",description:"Removed the Condé Nast Traveler announcement bar across all Proper properties.",link:"https://app.asana.com/1/361605662576941/inbox/1211472688196060/item/1216052487441410/story/1216120419719139?focus=true",status:"Done"},
+{id:3,hotel:"Hotel June",source:"Asana",title:"Hotel June — Condé Nast Announcement Bar Removed",description:"Removed the Condé Nast Traveler announcement bar from Hotel June.",link:"https://app.asana.com/1/361605662576941/inbox/1211472688196060/item/1216052487441413/story/1216120557243520?focus=true",status:"Done"},
+{id:4,hotel:"Ingleside Estate",source:"Asana",title:"ING — Third Night Complimentary Offer Published",description:"Published Third Night Complimentary offer and drafted Local Love offer on Ingleside Estate.",link:"https://app.asana.com/1/361605662576941/inbox/1211472688196060/item/1216080408458247/story/1216125624734806?focus=true",status:"Done"},
+{id:5,hotel:"Hotel June",source:"Asana",title:"HJWLA — Room Floor Plans Pop-Up Implemented",description:"Implemented floor plan pop-ups on the View Floor Plan CTA across Hotel June West LA room pages.",link:"https://app.asana.com/1/361605662576941/inbox/1211472688196060/item/1216043255722013/story/1216079549456055?focus=true",status:"Done"},
+{id:6,hotel:"Proper Hotel",source:"Asana",title:"DTLA — Valet Parking Fees Updated",description:"Updated parking prices and valet fee information on DTLA Proper parking pages.",link:"https://app.asana.com/1/361605662576941/inbox/1211472688196060/item/1216047944617688/story/1216052390676262?focus=true",status:"Done"},
+{id:7,hotel:"Shelborne",source:"Asana",title:"SMB — Suite Perks Icons Updated",description:"Updated the suite perks icons on the Shelborne rooms page.",link:"https://app.asana.com/1/361605662576941/project/1215064160093023/task/1216045051243261?focus=true",status:"Done"},
+{id:8,hotel:"Proper Hotel",source:"Asana",title:"Proper — Men's Health Press Article Published",description:"Published the new Men's Health press article on the Proper website.",link:"https://app.asana.com/1/361605662576941/project/1215064160093023/task/1216206521559640?focus=true",status:"Done"},
+{id:9,hotel:"Proper Hotel",source:"Asana",title:"Proper — New Press Article Added to Press Page",description:"Published a new press article to the Proper press page.",link:"https://app.asana.com/1/361605662576941/project/1215064160093023/task/1216173022615518?focus=true",status:"Done"},
+{id:10,hotel:"Hotel June",source:"Asana",title:"HJWL — Parking Fees Updated in Klaviyo",description:"Updated new parking fee information in Klaviyo guest confirmation and pre-arrival email communications.",link:"https://app.asana.com/1/361605662576941/inbox/1211472688196060/item/1216249057752990/story/1216249317094975?focus=true",status:"Done"},
+{id:11,hotel:"Hotel June",source:"Asana",title:"HJWLA — Parking Rates Updated on Website",description:"Updated parking price rates across the Hotel June West LA website.",link:"https://app.asana.com/1/361605662576941/inbox/1211472688196060/item/1216247095992274/story/1216248863156455?focus=true",status:"Done"},
+{id:12,hotel:"Avalon Hotel",source:"Email",title:"Avalon — New Blog Post Published",description:"Published a new blog post on Avalon Hotel to support ongoing content marketing efforts.",link:"https://docs.google.com/document/d/1ojKhfM-4ROyOXONuap_KUbLCqG5fp32vyERf6beGP-Q/edit?tab=t.0#heading=h.70hzdiwhvn0n",status:"Done"},
+];
+
+const DESIGN_TASKS=[
+{id:1,hotel:"Ingleside Estate",source:"Dev",title:"ING — AZDS to Namastay Redirections",description:"Completed redirections from AZDS to Namastay following booking engine integration on Ingleside Estate.",status:"Done"},
+{id:2,hotel:"Proper Hotel",source:"Dev",title:"Arcforma.ai — Figma Design Created",description:"Created Figma design for arcforma.ai project.",status:"Done"},
+{id:3,hotel:"Proper Hotel",source:"Dev",title:"Mobile Booking Widget — Development Started",description:"Started development of the Proper mobile booking widget update following design approval.",status:"In Progress"},
+{id:4,hotel:"Shelborne",source:"Dev",title:"SMB — Event Page Redesign Figma Created",description:"Created Figma design for SMB Event Page Redesign — ready for stakeholder review.",status:"Done"},
+{id:5,hotel:"Proper Hotel",source:"Dev",title:"City Hall Page — Live on Development Server",description:"City Hall Meetings & Events page made live on the development/local server.",status:"Done"},
+{id:6,hotel:"Shelborne",source:"Dev",title:"SMB — Pauline Webpage Development",description:"Working on the Pauline webpage buildout for Shelborne.",status:"In Progress"},
+{id:7,hotel:"Shelborne",source:"Dev",title:"SMB — Event Page Redesign Live on Dev Server",description:"SMB Event Page Redesign developed and live on the development/local server.",status:"Done"},
+{id:8,hotel:"Proper Hotel",source:"Dev",title:"ADA Sheet — In Progress",description:"Working on ADA compliance documentation and improvements for Proper Hotel.",status:"In Progress"},
+{id:9,hotel:"Shelborne",source:"Dev",title:"SMB — Wedding Page Updated",description:"Worked on and updated the Shelborne Wedding page.",status:"Done"},
+{id:10,hotel:"Santa Monica Proper",source:"Dev",title:"SMP — Ocean Way Room Packages Development Started",description:"Started development of the Ocean Way Room Packages page on Santa Monica Proper.",status:"In Progress"},
+{id:11,hotel:"Shelborne",source:"Dev",title:"SMB — Group Offers Page Updated",description:"Worked on and updated the SMB Group Offers page.",status:"Done"},
+{id:12,hotel:"Austin Proper",source:"Dev",title:"AUP — Guest Experience Page Development Started",description:"Started development of the Guest Experience page for Austin Proper.",status:"In Progress"},
+{id:13,hotel:"Shelborne",source:"Dev",title:"SMB — Offers Page Redesign Updated",description:"Worked on and updated the SMB Offers page redesign.",status:"Done"},
+];
+
+const SUMMARY=[
+{hotel:"Proper Hotel",summary:"Wellness pages optimized — missing schema implemented across pages. Monetate tag positioning under review and implementation in progress. Website general audit ongoing. Event schema updated. Condé Nast announcement bar removed. DTLA valet parking info updated. Men's Health and additional press articles published. City Hall page live on dev server. Mobile booking widget development started. ADA improvements in progress. GMB posts updated.",wins:["Wellness pages schema strengthens rich result eligibility","Press page enrichment builds brand authority","City Hall page advancing towards launch","Mobile widget development now underway"],seo:4,dev:3,design:2},
+{hotel:"Shelborne",summary:"Condé Nast announcement bar removed. Suite Perks icons updated on rooms page. SMB Event Page Redesign Figma created and live on dev server. Pauline webpage development in progress. Wedding page updated. Group Offers page updated. Offers page redesign updated.",wins:["Event Page Redesign on dev server — near launch","Pauline page advancing through development","Multiple design initiatives progressing in parallel"],seo:0,dev:2,design:5},
+{hotel:"Hotel June",summary:"Condé Nast announcement bar removed. HJWLA room floor plan pop-ups implemented. Parking rates updated across website and Klaviyo guest confirmation and pre-arrival emails — ensuring consistent pricing across all touchpoints.",wins:["Room floor plans improve guest research and booking confidence","Parking fee consistency across website and Klaviyo emails"],seo:1,dev:4,design:0},
+{hotel:"Avalon Hotel",summary:"Website general audit completed with fixes implemented. GSC errors analyzed — implementation queued. New Avalon blog post published.",wins:["Fresh blog content supports organic visibility","Site audit improvements mapped for resolution"],seo:2,dev:1,design:0},
+{hotel:"Ingleside Estate",summary:"Visibility drop analysis completed — competitor review, keyword gaps, and content recommendations identified. Third Night Complimentary offer published and Local Love offer drafted. AZDS to Namastay redirections completed following booking engine integration.",wins:["Visibility drop roadmap created for recovery","Third Night Complimentary offer captures extended-stay demand","Namastay booking migration complete"],seo:1,dev:1,design:1},
+{hotel:"Montauk Yacht Club",summary:"GSC errors fixed and implemented for improved search visibility.",wins:["GSC issues resolved — improved indexability"],seo:1,dev:0,design:0},
+{hotel:"Santa Monica Proper",summary:"Ocean Way Room Packages page development started.",wins:["New conversion-focused room packages page advancing"],seo:0,dev:0,design:1},
+{hotel:"Austin Proper",summary:"Guest Experience page development started.",wins:["New guest-focused content page advancing for improved engagement"],seo:0,dev:0,design:1},
+];
+
+const CATEGORY_ICONS={"Technical SEO":"⚙️","CRO / UX":"🎯","Local SEO":"📍","Content Strategy":"📋","Analytics":"📊"};
+let activeTab="summary",selectedHotel="All Properties";
+
+function badgeHTML(s){if(!s)return'';const l=s.toLowerCase();let c='badge-green';if(l.includes('progress'))c='badge-amber';else if(l.includes('analysis'))c='badge-blue';else if(l.includes('posted'))c='badge-green';return`<span class="badge ${c}">${s}</span>`}
+function linkPill(u,l){return`<a class="link-pill" href="${u}" target="_blank" rel="noopener">${extLink} ${l}</a>`}
+function filter(a){return selectedHotel==="All Properties"?a:a.filter(t=>{const sp=t.subProperties||[];return t.hotel===selectedHotel||sp.includes(selectedHotel)||t.hotel==="All Properties";})}
+
+function renderFilters(){document.getElementById('hotelFilters').innerHTML=HOTELS.map(h=>`<button class="hotel-btn ${h===selectedHotel?'active':''}" onclick="selectHotel('${h}')">${h}</button>`).join('')}
+
+function renderSummary(){
+const data=selectedHotel==="All Properties"?SUMMARY:SUMMARY.filter(s=>s.hotel===selectedHotel);
+const sc=filter(SEO_TASKS).length,dc=filter(DEV_TASKS).length,gc=filter(DESIGN_TASKS).length;
+const comp=filter(SEO_TASKS).filter(t=>["Implemented","Update Posted"].includes(t.status)).length+filter(DEV_TASKS).filter(t=>t.status==="Done").length+filter(DESIGN_TASKS).filter(t=>t.status==="Done").length;
+const total=sc+dc+gc;const pct=total>0?Math.round(comp/total*100):0;
+let h=`<div class="stat-row fade-up">
+<div class="stat-card"><div class="stat-card-val purple">${sc}</div><div class="stat-card-label">SEO Tasks</div></div>
+<div class="stat-card"><div class="stat-card-val blue">${dc}</div><div class="stat-card-label">Dev Tasks</div></div>
+<div class="stat-card"><div class="stat-card-val teal">${gc}</div><div class="stat-card-label">Design</div></div>
+<div class="stat-card"><div class="stat-card-val green">${pct}%</div><div class="stat-card-label">Completion</div></div>
+<div class="stat-card"><div class="stat-card-val amber">${data.length}</div><div class="stat-card-label">Hotels</div></div></div>`;
+data.forEach((s,i)=>{const c=HOTEL_COLORS[s.hotel]||"#2e5bff";const meta=[s.seo&&`${s.seo} SEO`,s.dev&&`${s.dev} Dev`,s.design&&`${s.design} Design`].filter(Boolean).join(' · ')||'Monitoring';
+h+=`<div class="summary-card fade-up delay-${Math.min(i+1,4)}"><div class="summary-header"><div class="summary-hotel-info"><div class="hotel-avatar" style="background:linear-gradient(135deg,${c},${c}aa)">${s.hotel.charAt(0)}</div><div><div class="summary-hotel-name">${s.hotel}</div><div class="summary-hotel-meta">${meta} this week</div></div></div><div class="badge-complete">✓ Completed</div></div><p class="summary-text">${s.summary}</p><div class="wins-box"><div class="wins-label">🏆 Expected Key Wins</div><div class="wins-tags">${s.wins.map(w=>`<span class="win-tag">${w}</span>`).join('')}</div></div></div>`;});
+document.getElementById('section-summary').innerHTML=h;document.getElementById('heroTotal').textContent=total;document.getElementById('heroCompleted').textContent=comp;}
+
+function renderSEO(){
+const tasks=filter(SEO_TASKS);let h='';
+tasks.forEach(t=>{const icon=CATEGORY_ICONS[t.category]||'📋';
+h+=`<div class="task-card" id="seo-${t.id}"><div class="task-head" onclick="toggleTask('seo',${t.id})"><div class="task-head-left"><div class="task-icon">${icon}</div><div><div class="task-title">${t.title}</div><div class="task-meta">${t.hotel} · ${t.source} · ${t.category}</div></div></div><div class="task-head-right">${badgeHTML(t.status)}<span class="chevron">▾</span></div></div><div class="task-body"><div class="task-body-inner">${t.subProperties?`<div style="margin-bottom:14px;font-size:12px;color:var(--ink-soft)"><strong style="font-size:10px;color:var(--ink-muted);text-transform:uppercase;letter-spacing:.08em">Properties: </strong>${t.subProperties.join(' · ')}</div>`:''}<div class="task-columns"><div><div class="task-col-label">What Was Found</div><div class="task-col-text">${t.description}</div></div><div><div class="task-col-label">Action Taken</div><div class="task-col-text">${t.action}</div></div></div>${t.links.length?`<div class="task-links-label">Task Sheets & References</div><div class="task-links">${t.links.map(l=>linkPill(l.url,l.label)).join('')}</div>`:''}</div></div></div>`;});
+document.getElementById('section-seo').innerHTML=h||'<p style="color:var(--ink-muted);text-align:center;padding:40px 0">No SEO tasks for this property.</p>';}
+
+function renderDev(){
+const tasks=filter(DEV_TASKS);let h='';
+tasks.forEach(t=>{h+=`<div class="task-card dev-card" id="dev-${t.id}"><div class="task-head" onclick="toggleTask('dev',${t.id})"><div class="task-head-left"><div class="dev-num">${t.id}</div><div><div class="task-title">${t.title}</div><div class="task-meta">${t.hotel} · via ${t.source}</div></div></div><div class="task-head-right">${badgeHTML(t.status)}<span class="chevron">▾</span></div></div><div class="task-body"><div class="task-body-inner"><p class="task-col-text" style="margin-bottom:14px">${t.description}</p>${t.link?`<div class="task-links">${linkPill(t.link,'View Task')}</div>`:''}</div></div></div>`;});
+document.getElementById('section-dev').innerHTML=h||'<p style="color:var(--ink-muted);text-align:center;padding:40px 0">No dev tasks for this property.</p>';}
+
+function renderDesign(){
+const tasks=filter(DESIGN_TASKS);let h='';
+tasks.forEach(t=>{h+=`<div class="task-card design-card" id="design-${t.id}"><div class="task-head" onclick="toggleTask('design',${t.id})"><div class="task-head-left"><div class="design-num">${t.id}</div><div><div class="task-title">${t.title}</div><div class="task-meta">${t.hotel} · via ${t.source}</div></div></div><div class="task-head-right">${badgeHTML(t.status)}<span class="chevron">▾</span></div></div><div class="task-body"><div class="task-body-inner"><p class="task-col-text">${t.description}</p></div></div></div>`;});
+document.getElementById('section-design').innerHTML=h||'<p style="color:var(--ink-muted);text-align:center;padding:40px 0">No design tasks for this property.</p>';}
+
+function switchTab(tab){activeTab=tab;document.querySelectorAll('.tab-btn').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab));document.querySelectorAll('.section').forEach(s=>s.classList.toggle('active',s.id===`section-${tab}`));}
+function selectHotel(h){selectedHotel=h;renderFilters();renderSummary();renderSEO();renderDev();renderDesign();}
+function toggleTask(p,id){const el=document.getElementById(`${p}-${id}`);if(!el)return;const w=el.classList.contains('open');document.querySelectorAll(`#section-${p} .task-card`).forEach(c=>c.classList.remove('open'));if(!w)el.classList.add('open');}
+
+renderFilters();renderSummary();renderSEO();renderDev();renderDesign();
+</script>
+</body>
+</html>
